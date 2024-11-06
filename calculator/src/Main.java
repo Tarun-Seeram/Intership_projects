@@ -1,53 +1,62 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Calculator calculator = new Calculator();
-
+public class Main{
+    public static void main(String[] Args) {
+        Scanner scan = new Scanner(System.in);
         while (true) {
-            System.out.println("Simple Calculator");
-            System.out.println("Select operation:");
-            System.out.println("1. Add");
-            System.out.println("2. Subtract");
-            System.out.println("3. Multiply");
-            System.out.println("4. Divide");
-            System.out.println("5. Exit");
-            System.out.print("Enter choice (1-5): ");
-            int choice = scanner.nextInt();
+            double result;
+            System.out.println("Enter '1' for Addition: ");
+            System.out.println("Enter '2' for Subtraction: ");
+            System.out.println("Enter '3' for Multiplication: ");
+            System.out.println("Enter '4' for Division: ");
+            System.out.println("Enter '5' for Exit.");
+            System.out.print("Enter your operation: ");
 
-            if (choice == 5) {
+
+            int c = scan.nextInt();
+
+
+            if (c == 5) {
                 System.out.println("Exiting...");
                 break;
             }
 
-            System.out.print("Enter first number: ");
-            double num1 = scanner.nextDouble();
-            System.out.print("Enter second number: ");
-            double num2 = scanner.nextDouble();
+        System.out.print("Enter the First number: ");
+        double num1 = scan.nextDouble();
+        System.out.print("Enter the Second number: ");
+        double num2 = scan.nextDouble();
 
-            switch (choice) {
-                case 1:
-                    System.out.println("Result: " + calculator.add(num1, num2));
-                    break;
-                case 2:
-                    System.out.println("Result: " + calculator.subtract(num1, num2));
-                    break;
-                case 3:
-                    System.out.println("Result: " + calculator.multiply(num1, num2));
-                    break;
-                case 4:
-                    try {
-                        System.out.println("Result: " + calculator.divide(num1, num2));
-                    } catch (IllegalArgumentException e) {
-                        System.out.println(e.getMessage());
-                    }
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please try again.");
-            }
+
+
+        switch (c) {
+            case (1):
+                result = Calculator.add(num1, num2);
+                System.out.println("Result: " + String.format("%.4f" , result));
+                break;
+            case (2):
+                result = Calculator.sub(num1, num2);
+                System.out.println("Result: " + String.format("%.4f" , result));
+                break;
+            case (3):
+                result = Calculator.mul(num1, num2);
+                System.out.println("Result: " + String.format("%.4f" , result));
+                break;
+            case (4):
+
+                try {
+                    result = Calculator.div(num1, num2);
+                    System.out.println("Result: " + String.format("%.4f" , result));
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+
+            default:
+                System.out.println("Enter a valid input!");
+        }
         }
 
-        scanner.close();
+scan.close();;
     }
+
 }
