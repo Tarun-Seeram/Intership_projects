@@ -1,0 +1,17 @@
+# Number Guessing Game
+
+This is a simple Java console game where the program randomly selects a number between 1 and 100, and the user has to guess it. The program provides hints to help the user guess the correct number.
+
+## How It Works
+1. The program generates a random number between 1 and 100.
+2. The user is prompted to enter a guess.
+3. If the guess is incorrect, the program gives a hint:
+   - "Too low!" if the guess is less than the selected number.
+   - "Too high!" if the guess is more than the selected number.
+4. The user continues guessing until they enter the correct number, at which point the program congratulates them.
+
+## How to Run
+1. Make sure you have Java installed. You can check this by running `java -version` in your command line.
+2. Compile the program with:
+   ```bash
+   javac GuessTheNumber.java
