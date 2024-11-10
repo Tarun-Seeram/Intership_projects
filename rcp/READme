@@ -1,0 +1,63 @@
+# Rock-Paper-Scissors Game in Java
+
+This is a simple implementation of the classic **Rock-Paper-Scissors** game using the Java programming language. The game allows the user to play against the computer, which randomly selects between "Rock", "Paper", and "Scissors".
+
+## Features
+- User can choose between "Rock", "Paper", and "Scissors".
+- The computer randomly selects an option.
+- The game determines the winner based on the traditional rules:
+  - Rock beats Scissors
+  - Scissors beat Paper
+  - Paper beats Rock
+- Provides a tie scenario if both user and computer make the same choice.
+- Handles invalid inputs gracefully.
+
+## How to Run
+1. Clone or download this repository to your local machine.
+2. Open the project in your favorite IDE (like Eclipse, IntelliJ IDEA, or VS Code) or compile using the terminal.
+3. Run the `Main.java` file.
+
+### Running from Terminal
+```bash
+javac Main.java
+java Main
+```
+
+## User Instructions
+1. The game will prompt you to select one of the following options:
+   - **R** for Rock
+   - **P** for Paper
+   - **S** for Scissors
+2. Enter your choice (R, P, or S).
+3. The program will then display the computer’s choice and announce the result (Win, Lose, or Tie).
+
+## Example Output
+```
+Choose: 'R' for Rock, 'P' for Paper, 'S' for Scissors
+Enter your choice: R
+Computers choice: S
+Your choice: R
+You win! Rock beats Scissors.
+```
+##Project Structure
+```
+├── Main.java
+└── README.md
+```
+
+##Code Explanation
+The game logic is implemented using a `switch` statement to check the user's choice against the computer's random selection. The program uses the `Random` class to generate a random choice for the computer and the `Scanner` class to read user input.
+
+## Technologies Used
+- Java
+- Random class for generating random choices
+- Scanner class for user input
+
+## Improvements
+Potential improvements for future versions:
+- Add a score counter to track wins, losses, and ties over multiple rounds.
+- Implement a graphical user interface (GUI) for a better user experience.
+- Add more features like best-of-three matches.
+
+## License
+This project is open-source and available for anyone to use and modify.
